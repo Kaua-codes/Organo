@@ -1,38 +1,73 @@
+/* Card */
 .colaborador {
+  position: relative;
   width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
 }
 
+/* Botão de deletar */
+.colaborador__deletar {
+  position: absolute;
+  right: -12px;
+  top: -12px;
+  cursor: pointer;
+}
+
+/* Cabeçalho */
 .colaborador__cabecalho {
   background-color: #f0f0f0;
   border-radius: 10px 10px 0px 0px;
 }
 
+/* Imagem */
 .colaborador img {
   width: 100px;
   border-radius: 50%;
   position: relative;
   bottom: -50px;
+  margin: 0 auto;
 }
 
+/* Rodapé */
 .colaborador__rodape {
-  background: #ffffff;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
-  border-radius: 0px 0px 10px 10px;
   padding-top: 90px;
   padding-bottom: 40px;
+  flex-grow: 1; /* Faz o rodapé expandir para alinhar alturas */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Espaça o conteúdo internamente */
 }
 
+/* Título */
 .colaborador__rodape h4 {
   color: #6278f7;
   font-size: 18px;
   line-height: 22px;
   font-weight: bold;
   margin-bottom: 8px;
+  text-align: center;
 }
 
+/* Subtítulo */
 .colaborador__rodape h5 {
   color: #212121;
   font-size: 18px;
   line-height: 22px;
   padding: 0px 16px;
+  text-align: center;
+}
+
+/* Favoritar */
+.colaborador__favoritar {
+  margin-top: auto;
+  text-align: center;
+}
+
+.colaborador__favoritar > * {
+  cursor: pointer;
 }

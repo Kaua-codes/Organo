@@ -1,6 +1,6 @@
-import "./campoTexto.css";
+import "./campo.css";
 
-const CampoTexto = (props) => {
+const Campo = (props) => {
   //const [valor, setValor] = useState("")
 
   const aoDigitado = (evento) => {
@@ -9,10 +9,11 @@ const CampoTexto = (props) => {
   };
 
   return (
-    <div className="campo-texto">
+    <div className={`campo campo-${props.type || "text"}`}>
       <label>{props.label}</label>
       <input
         value={props.valor}
+        type={props.type || "text"}
         onChange={aoDigitado}
         required={props.obrigatorio}
         placeholder={props.placeholder}
@@ -21,4 +22,4 @@ const CampoTexto = (props) => {
   );
 };
 
-export default CampoTexto;
+export default Campo;
